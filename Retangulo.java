@@ -46,6 +46,13 @@ public class Retangulo extends FiguraGeometrica {
 
     @Override
     public String getInfo(){
-        return super.getInfo() + " | " + getDetalhes();
+        return String.format(
+            "%s | %s | %s | Perímetro: %.2f | Área: %.2f",
+            getTipoFigura(),
+            super.getInfo(),
+            getDetalhes(),
+            calcularPerimetro(),
+            calcularArea()
+        );
     }
 }
